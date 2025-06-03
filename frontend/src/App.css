@@ -90,6 +90,24 @@ body {
   width: 100%;
 }
 
+/* Ensure navbar is visible on desktop */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    display: flex !important;
+  }
+}
+
+/* Mobile navbar collapse behavior */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    display: none;
+  }
+  
+  .navbar-collapse.show {
+    display: block !important;
+  }
+}
+
 /* Page Container */
 .page-container {
   min-height: 100vh;
