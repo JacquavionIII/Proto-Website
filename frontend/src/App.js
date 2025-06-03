@@ -82,6 +82,15 @@ const Navigation = () => {
 
 // Home Component
 const Home = () => {
+  useEffect(() => {
+    // Initialize particles on component mount
+    const timer = setTimeout(() => {
+      initParticles();
+    }, 100);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="page-container">
       <div id="particles-js" className="particles-container"></div>
